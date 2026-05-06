@@ -1,42 +1,99 @@
-import pyodbc
-import customtkinter as c
-
-c.set_appearance_mode("system")
-c.set_default_color_theme("blue")
-
-app = c.CTk()
-app.geometry("200x300")
-app.title("Creata\Connect MS DATABASE")
-
-entry_database = c.CTkEntry(app, placeholder_text="Numele datei de baza")
-entry_database.place(relx=0.1, rely=0.1)
+from sqlalchemy import create_engine, text
 
 
-def create_db():
-    pass
+engine = create_engine(
+    "mssql+pyodbc://@CATALIN/Magazin"
+    "?driver=ODBC+Driver+17+for+SQL+Server"
+    "&trusted_connection=yes"
+)
 
-create_button = c.CTkButton(app, text="Create", command=create_db, fg_color="green")
+try:
+    with engine.connect() as conn:
+        conn.execute(text("select @@version"))
+        print("Conectat cu succes")
+except Exception as e:
+    print(e)
 
-create_button.place(relx=0.1, rely=0.2)
+while True:
+    print('====START====')
+    print('1.Afiseaza toate produsele din tabel')
+    print('2.Afiseaa toti clienti')
+    print('3.Afiseaza doar produsele cu stoc mai mare ca 20')
+    print('4.Afiseaza doar produsele cu pretul sub 200 de lei')
+    print('5.Afiseaza produsele sortate dupa pret(crescator)')
+    print("6.Afiseaza produsele sortate dupa pret(descrescator)")
+    print('7.End')
+    comanda=int(input('Introdu numarul comenzii:'))
+    if comanda==1:
+        print("====Toatea produsele")
+        with engine.begin() as conn:
+            res=conn.execute(text("""
+                            SELECT * FROM products
+                                """))
+            for row in res:
+                print(row)
+            conn.commit()
+    if comanda==2:
+        print('====Toti clienti====')
+        with engine.begin() as conn:
+            res = conn.execute(
+                text(
+                    """
+                            SELECT * FROM customers
+                                """
+                )
+            )
+            for row in res:
+                print(row)
+    if comanda == 3:
+        print("====Toate produsele cu stoc mai mare de 20====")
+        with engine.begin() as conn:
+            res = conn.execute(
+                text(
+                    """
+                            SELECT * FROM products WHERE stock >20
+                                """
+                )
+            )
+            for row in res:
+                print(row)
+    if comanda == 4:
+        print("====Toate produsele cu pret mai mare de 200 lei====")
+        with engine.begin() as conn:
+            res = conn.execute(
+                text(
+                    """
+                            SELECT * FROM products WHERE price >200
+                                """
+                )
+            )
+            for row in res:
+                print(row)
+    if comanda == 5:
+        print("====Aranjeaza produsele in ordine crescatoare====")
+        with engine.begin() as conn:
+            res = conn.execute(
+                text(
+                    """
+                            SELECT * FROM products ORDER BY stock ASC
+                                """
+                )
+            )
+            for row in res:
+                print(row)
+    if comanda == 6:
+        print("====Aranjeaza produsele in ordine crescatoare====")
+        with engine.begin() as conn:
+            res = conn.execute(
+                text(
+                    """
+                            SELECT * FROM products ORDER BY stock DESC
+                                """
+                )
+            )
+            for row in res:
+                print(row)
 
-
-def conect_db():
-    try:
-        conection = pyodbc.connect(
-            "DRIVER={ODBC Driver 17 for SQL Server};"
-            "Server=localhost;"
-            f"Database={entry_database.get()};"
-            "Trusted_Connection=yes;"
-        )
-        info_label.configure(text='Conexiunea a avut succes')
-    except pyodbc.Error as ex:
-        info_label.configure(text="Conexiunea a esuat")
-
-
-conect_button = c.CTkButton(app, text="Connect", command=conect_db, fg_color="blue")
-conect_button.place(relx=0.1, rely=0.3)
-info_label=c.CTkLabel(app,text='turtle')
-info_label.place(relx=0.1,rely=0.4)
-app.mainloop()
-
-
+    if comanda==7:
+        print('====END PROGRAM====')
+        break

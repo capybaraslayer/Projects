@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Meteo</title>
+        <style>
+            body {
+                max-width: 800px;
+                margin: auto;
+                background: linear-gradient(to bottom, #87ceeb, #ffffff);
+                min-height: 100vh;
+                font-family: 'Roboto', sans-serif;
+                color: aliceblue;
+            }
+            p {
+                font-size: 20px;
+            }
+            h1 {
+                font-size: 48px;
+                text-align: center;
+            }
+            h2 {
+                font-size: 38px;
+            }
+            .rezultate {
+                font-family: Arial, sans-serif;
+                background-color: rgba(224, 211, 211, 0.3);
+                border-radius: 35px;
+                padding: 30px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+                margin-top: 50px;
+            }
+            .oras {
+                color: aliceblue;
+                font-size: x-large;
+            }
+            .input {
+                background-color: rgba(224, 211, 211, 0.3);
+                border-radius: 35px;
+                padding: 30px 20px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            }
+            .input input {
+                border-radius: 20px;
+                padding: 12px 20px;
+                border:none;
+                outline:blue;
+                width: 200px;
+            }
+            .input label {
+                font-size: 30px;
+                font-weight: 700;
+            }
+            .input button {
+                border-radius: 25px;
+                padding: 12px 25px;
+                font-size: 16px;
+                background-color: #1a73e8; /* albastru */
+                color: white;
+                cursor: pointer;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cauta ce vreme va fi azi!</h1>
+        <div class="input">
+            <form action="" method="GET">
+                <label class="oras" for="oras">Introdu orasul:</label>
+                <input type="text" id="oras" name="oras" />
+                <button type="submit" value="submit">Cauta</button>
+            </form>
+        </div>
+        {% if t and v and d %}
+        <div class="rezultate">
+            <h2>Rezultate</h2>
+            <p>Temperatura:{{t}}°C</p>
+            <p>Viteza vantului:{{v}} km/h</p>
+            <p>
+                Directia vantului:{{d}}0° = Nord, 90° = Est, 180° = Sud, 270° =
+                Vest
+            </p>
+        </div>
+        {%endif%}
+    </body>
+</html>
