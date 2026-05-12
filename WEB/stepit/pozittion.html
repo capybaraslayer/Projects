@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pozitionare</title>
+    <style>
+        .box-static{
+            position: static;
+            height: 200px;
+            background-color: blue;
+            color: white;
+            padding: 20px;
+        }
+        .box-relativ{
+            position: relative;
+            height:200px;
+            background-color:red;
+            color: white;
+            padding: 20px;
+            top:20px;
+            left: 25px;
+        }
+        .box-relativ1,
+        .box-relativ2,
+        .box-relativ3
+        {
+            width: 200px;
+            padding: 20px;
+            margin: 10px;
+    
+        }
+        .box-relativ1{
+            background-color: lightblue;
+        }
+        .box-relativ2{
+            position: relative;
+            top: 50px;
+            left: 20px;
+            background-color: lightgreen;
+        }
+        .box-relativ3{
+            background-color: lightcoral;
+
+
+        }
+        .box-absolut{
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            width: 250px;
+            padding: 20px;
+            background-color: orange;
+            
+
+        }
+    
+    </style>
+</head>
+<body>
+    <!--proprietatea pozition
+    static;relative;absolut;fixed;stiky
+    -->
+    <div class="box-static">Box static</div>
+    <!--La relativ se muta vizual da locul lui initial ramane rezervat-->
+    <div class="box-relativ">Box relativ</div>
+    <div class="box-relativ1">Box relativ1</div>
+    <div class="box-relativ2">Box relativ1</div>
+    <div class="box-relativ3">Box relativ1</div>
+
+    <div class="box-absolut">Box absolut</div>
+    <p>Text dupa ploc absolut</p>
+
+</body>
+</html>
