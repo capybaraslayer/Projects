@@ -1,14 +1,6 @@
-clienti = ["Catalin", "Mihaela", "Constanta"]
-
-
-def adaugare_client():
-    client_nou = input("Cum te numesti")
-    clienti.append(client_nou)
-    for client in clienti:
-        print(client)
-
-def sterge_client(client):
-    clienti.remove(client)
-    print(clienti)
-adaugare_client()
-sterge_client('Catalin')
+def containsDuplicate(nums):
+    print(len(set(nums)))
+    print(set(nums))
+    print(len(nums))
+    return len(nums) != len(set(nums))
+print(containsDuplicate([1,1,1,3]))
