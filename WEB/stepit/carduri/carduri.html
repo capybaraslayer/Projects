@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carduri</title>
     <style>
+        body{
+            background-color:lightcyan;
+        }
         .title{
-            margin: auto;
-            border-radius: 8px;
+            position: sticky;
+            top: 20px;
+            background-color:lightblue;
+            color: white;
+            padding: 15px;
             text-align: center;
-            border: 1px solid black;
-            padding: auto;
-            width: 50%;
+
+    
         }
         .title p{
             font-size: 20px;
+        }
+        .title h1{
+            font-size: 40px;
         }
         .continut{
             text-align: center;
@@ -22,33 +30,66 @@
         }
 
        .card{
+        vertical-align: top;
         position: relative;
         display: inline-block;
         width: 350px;
         height: 500px;
         padding: 15px;
-        top: 20px;
-        margin: 20px;
+        top: 30px;  
+        margin: 40px;
         border: 1px solid black;
         border-radius: 10px;
         text-align: center;
         box-sizing: border-box;
         font-size: 40px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2)
         }
         .card img{
         width: 100%;
         height: 180px;
         border-radius: 10px;
         }
-        .new{
+        .card h2{
+            font-size: 40px;
+        }
+        .card p{
+            font-size: 30px;
+            text-align: left;
+            line-height: 50px;
+        
+        }
+        .nou{
             background-color: lightyellow;
         }
-        .reducere{
+        .red{
             background-color: rgb(171, 238, 171);
         }
-        .promotion{
+        .pro{
             background-color: lightcoral;
         }
+        .badge{
+            position: absolute;
+            width: 70px;
+            height: 42px;
+            top: 2px;
+            right: 2px;
+            background-color:rgb(226, 237, 28);
+            padding: 5px 10px;
+            color: white;
+            border-radius: 8px;
+        }
+        .new{
+             background-color:rgb(226, 237, 28);
+
+        }
+        .reducere{
+             background-color:rgb(56, 231, 37);
+        }
+        .promotion{
+            background-color:red;
+        }
+        
     </style>
 </head>
 <body>
@@ -57,16 +98,29 @@
         <p>Colecție de Carduri Tematice</p>
     </div>
     <div class="continut">
-    <div class="card new ">
-        <p>Iphone 20</p>
+    <div class="card nou ">
+        <div class="badge new">New</div>
+        <h2>Iphone 20</h2>
         <img src="iphone.jpg"/>
+        <p>Cel mai nou iPhone.<br>
+        Preț: 4999 lei</p>
+        
     </div>
-    <div class="card reducere ">
-        <p>Samsung S20</p>
+    <div class="card red ">
+        <div class="badge reducere">-%</div>
+        <h2>Samsung S20</h2>
+        <img src="samsung.jpg">
+        <p>Reducere 30%!<br>
+        Preț: 2999 lei 2099 lei</p>
     </div>
-    <div class="card promotion">
-        <p>Husa+Bowerbank</p>
+    <div class="card pro">
+        <div class="badge promotion">1+1</div>
+        <h2>Husa+Bowerbank</h2>
+        <img src="husa.jpg"/>
+        <p>Cumperi husa, primești powerbank gratuit. <br>
+        Preț: 299 lei</p>
     </div>
+    <div class="Badge-reducere"></div>
     </div>
 
     <div class=""></div>
