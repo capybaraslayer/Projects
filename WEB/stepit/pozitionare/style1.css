@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    background-color: rgba(235, 227, 235, 0.2);
+    font-family: Arial, Helvetica;
+}
+.meniu{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size:24px;
+    z-index: 1000;
+}
+.baner{
+    background-color: orange;
+    text-align: center;
+    padding: 60px;
+    margin-bottom: 30px;
+}
+.produs{
+    width: 900px;
+    margin: auto;
+}
+.card{
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid black;
+    text-align: center;
+}
+.badge{
+    position: absolute;
+    top: -15px;
+    right: -25px;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 5;
+
+}
+.red{
+    background-color:red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.buy-btn{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    margin-left:-50px ;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    z-index: 4;
+}
+.pop-up{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    z-index:999;
+}
+.help-btn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    z-index: 1000;
+}
+p{
+    margin: 20px;
+
+}
