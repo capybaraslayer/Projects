@@ -1,0 +1,31 @@
+BIBLIOTECA - Sistem de gestiune
+
+DONE:
+  -creat baza de date(tabele)
+  - functie care citeste datele din csv\ populare_tables()
+  -validarea email\ valideaza_email(email)
+  -validare numar\ valideaza_telefon_md(telefon)
+  -introdu user\ introdu_user(prenume, nume)
+  -functie care vede pentru user care sunt imprumuturile lui\ view_user(nume, prenume)
+  -functie care vede pentru carte la cine este \view_carte():
+  - Functia imprumuta_carte()\   imprumuta_carte()
+  -functie de returnat o carte \return_carte()
+
+
+
+
+IN PROGRES:
+  -functii care creaza penalizari daca trece timpu de intors cartea
+  - functie care arata pentru carte cine au avut aceasta carte
+  -cand fac return trebuie sa adaug + 1 in stockul cartii care am returnat
+  -functie de actualizare_intarziere
+  -functie marirea timpului de imprumuta
+  - functie pentru punerea a banului
+TODO:
+
+    -rezerva_carte() - utilizatorul rezerva o carte indisponibila
+  - lista_asteptare() - adauga userul la coada daca stock = 0
+  - reinnoire_imprumut() - prelungeste termenul cu inca 14 zile
+  - blocare_user() - userul nu poate imprumuta daca are penalizari neplatite
+  - istoric_user() - afiseaza toate cartile imprumutate de un user
+
