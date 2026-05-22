@@ -1,0 +1,137 @@
+body{
+    background-color: rgb(252, 252, 252);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu{
+    position: sticky;
+    padding: 20px;
+    font-size: 20px;
+    background-color: rgb(220, 220, 241);
+    text-align: end;
+    text-decoration: none;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    border: 1px solid rgb(38, 68, 204);
+    background-color: rgb(38, 68, 204);
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.logo{
+    text-align: left;
+    height: 20px;
+}
+
+.banner-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color:rgb(252, 252, 252);
+    padding: 10px 0;
+}
+
+.banner {
+    background-image: url('gadgetzone_banner.jpg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    height: 400px;
+    max-width: 1200px;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 24px;
+    margin: 10px 20px;
+
+}
+.cards{
+    display:  flex;
+    flex-wrap: wrap;
+    margin: 40px 15px 10px 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 9px;
+    padding: 20px;
+    justify-content: space-between;
+}
+.card{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 250px;
+    height: 400px;
+    padding: 20px;
+    margin: 7px;
+    justify-content: space-evenly;
+
+}
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 15px 10px 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 9px;
+    padding: 20px;
+
+}
+.abonare-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    margin: 40px 15px 10px 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 9px;
+    padding: 20px;
+    height: 150px;
+}
+.abonare-text {
+    flex: 1;
+}
+.abonare-box h1{
+    font-size: 36px;
+    margin: 0;
+
+}
+.abonare-box p {
+    margin: 0;
+}
+.abonare-form input {
+    width: 100%;
+    box-sizing: border-box;
+}
+.abonare-form{
+
+    display: grid;
+    gap: 12px;
+    margin-top: auto;
+    grid-template-columns: 1fr 1fr;
+
+}
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+    background: #f5f5f5;
+    outline: none;
+    box-sizing: border-box;
+}
+button{
+
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid rgb(38, 68, 204);
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+    background: rgb(38, 68, 204);
+    outline: none;
+    box-sizing: border-box;
+    color: white;
+
+}

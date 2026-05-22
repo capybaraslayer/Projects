@@ -1,0 +1,15 @@
+<svg width="320" height="64" viewBox="0 0 320 64" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>GadgetZone navbar logo</title>
+  <desc>Elegant navbar logo for a gadget store</desc>
+
+  <rect x="0" y="6" width="48" height="48" rx="11" fill="#185FA5"/>
+  <circle cx="24" cy="30" r="13" fill="none" stroke="#85B7EB" stroke-width="1.3"/>
+  <polyline points="21,22 16,30 23,30 18,38" fill="none" stroke="#E6F1FB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="9" cy="30" r="2.2" fill="#378ADD"/>
+  <circle cx="39" cy="30" r="2.2" fill="#378ADD"/>
+  <circle cx="24" cy="15" r="2.2" fill="#378ADD"/>
+  <circle cx="24" cy="45" r="2.2" fill="#378ADD"/>
+
+  <text x="62" y="36" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="26" fill="#1a1a1a" letter-spacing="-0.3">gadget<tspan fill="#185FA5">zone</tspan></text>
+  <text x="64" y="51" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="10" fill="#888" letter-spacing="2.8">TECH &amp; GADGETS</text>
+</svg>

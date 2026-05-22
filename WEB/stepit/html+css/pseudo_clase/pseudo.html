@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudoclasse</title>
+    <style>
+        a:link{color: blue;}
+        a:visited{color:green;}
+       /*hover
+       a{color:rgb(31, 46, 31);}*/
+       a:hover{color:red;}
+
+
+       button{
+        padding: 15px 25px;
+        background-color: blue;
+        color: white;
+        border: none;
+       }
+/*transition - face animatia mai lenta*/
+       .transition{
+         background-color: lightblue;
+        transition: 0.5s;
+    }
+
+       button:hover{
+        background-color: darkblue;
+        cursor: pointer;
+
+       }
+
+/*active - se aplica in timpul click-ului*/
+   button:active{
+    transform: scale(1.5);
+   }
+
+/*focus*/
+
+input:focus{
+    border: 2px solid blue;
+    outline: none;
+}
+
+
+/*checked*/
+
+input:checked{
+    width: 30px;
+    height: 30px;
+}
+
+/*disabled*/
+input:disabled{
+    background-color: #ccc;
+}
+
+/*empty*/
+div:empty{
+    height: 50px;
+    background-color: red;
+}
+
+
+/**/
+
+    </style>
+</head>
+<body>
+    <a href="#"> Tasteaza aici!!!!</a>
+    <button>Trimite</button>
+    <button class="transition">Primeste</button>
+    <button>click</button>
+    <input type="text" placeholder="nume">
+
+    <input type="checkbox">
+    <input type="text" disabled>
+
+    <div></div>
+
+</body>
+</html>
