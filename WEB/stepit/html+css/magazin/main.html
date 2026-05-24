@@ -1,52 +1,99 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Estore</title>
+        <title>GadgetZone</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="header">
+        <header>
             <nav class="menu">
-                <div class="logo"><img src="gadgetzone_logo.svg" /></div>
-                <a href="#">Acasa</a>
-                <a href="#">Servicii</a>
-                <a href="#">Contact</a>
+                <div class="logo"><img src="gadgetzone_logo.svg" alt="GadgetZone" /></div>
+                <div class="nav-links">
+                    <a href="#">Acasă</a>
+                    <a href="#">Despre</a>
+                    <a href="#">Servicii</a>
+                    <a href="#">Portofoliu</a>
+                    <a href="#">Contact</a>
+                </div>
             </nav>
-            <div class="banner-wrapper">
-                <div class="banner"></div>
-            </div>
-        </div>
-        <div class="cards">
-            <div class="card">
-                <div class="badge"> -50% </div>
-            </div>
-            <div class="card">
-                <div class="badge"> -50% </div>
-            </div>
-            <div class="card">
-                <div class="badge"> -50% </div>
-            </div>
-            <div class="card">
-                <div class="badge"> -50% </div>
-            </div>
-        </div>
-        <div class="abonare-box">
-            <div class="abonare-text">
-                <h1>Abonează-te!</h1>
-            <p>Înscrie-te acum și fii la curent cu cele mai avantajoase oferte</p>
-            </div>
-            <form class="abonare-form">
-                <input type="text" placeholder="Nume"/>
-                <input type="email" placeholder="Email"/>
-                <input type="tel" placeholder="Numar de telefon"/>
-                <button type="submit">Abonează-mă!</button>
-            </form>
-        </div>
-        <div class="footer">
-        <p> 2026 GadgetZone. Toate drepturile rezervate.</p>
-    </div>
-    </body>
+        </header>
 
+        <main>
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Mega Sale</h1>
+                    <p>Gadgeturi & Electronice — reduceri de până la <strong>-50%</strong> la toate categoriile</p>
+                    <a href="#" class="hero-btn">Descoperă ofertele</a>
+                </div>
+            </section>
+            <section class="despre_noi">
+                <div class="imagine_despre">
+                </div>
+                <div class="continut_text">
+                    <h2>Despre noi</h2>
+                    <p>Tehnologia care contează, adusă direct la tine. 
+                        <br>Explorează o selecție premium de gadgeturi inovatoare și accesorii smart concepute să îți simplifice viața digitală.</p>
+                    <a href="#" class="btn_despre">Afla mai multe</a> 
+                </div>
+            </section>
+            <section class="servicii">
+                <div class="serviciu_livrare">
+                    <img src="">
+                    <h3>Livrare in 24h</h3>
+                    <p>Gadgetul tau preferat ajunge la tine</p>
+
+                </div>
+                <div class="serviciu_garantie">
+                    <img src="">
+                    <h3>Garanție Extinsă</h3>
+                    <p>24 de luni garantie</p>
+                </div>
+                <div class="serviciu_suport">
+                    <img src="">
+                    <h3>Suport Tech</h3>
+                    <p>Echipa noastră de pasionați te ajută</p>
+                </div>
+                <div class="serviciu_returnare">s
+                    <img src="">
+                    <h3>Retur 14 Zile</h3>
+                    <p>Nu îți place? Îl trimiți înapoi simplu și rapid</p>
+                </div>
+            </section>
+
+            <section class="cards">
+                <article class="card">
+                    <div class="badge">-50%</div>
+                </article>
+                <article class="card">
+                    <div class="badge">-50%</div>
+                </article>
+                <article class="card">
+                    <div class="badge">-50%</div>
+                </article>
+                <article class="card">
+                    <div class="badge">-50%</div>
+                </article>
+            </section>
+
+            <section class="abonare-box">
+                <div class="abonare-text">
+                    <h1>Abonează-te!</h1>
+                    <p>Înscrie-te acum și fii la curent cu cele mai avantajoase oferte</p>
+                </div>
+                <form class="abonare-form">
+                    <input type="text" placeholder="Nume" />
+                    <input type="email" placeholder="Email" />
+                    <input type="tel" placeholder="Număr de telefon" />
+                    <button type="submit">Abonează-mă!</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 GadgetZone. Toate drepturile rezervate.</p>
+        </footer>
+    </body>
 </html>
