@@ -111,7 +111,7 @@ body{
     background-repeat: no-repeat;
     width: 450px;
     height: 250px;
-    border: 1px solid rgb(38, 68, 204);
+    border:none;
     border-radius: 8px;
     overflow: hidden;
     flex-shrink: 0;
@@ -268,18 +268,26 @@ body{
 
 .contact-box{
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 10px;
-    margin: 40px 15px 10px 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 60px;
+    margin: 40px auto;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     border-radius: 9px;
     padding: 50px;
-    height: 300px;
+    min-height: 350px;
+    box-sizing: border-box;
+    position: relative; 
+    
 }
-.contact-box h1{
+.contact-form h1{
     font-size: 36px;
     margin: 0;
+    width: 100%;
+   
+
 
 }
 .contact-box p {
@@ -291,12 +299,13 @@ body{
     box-shadow: 0 0 10px rgba(42, 111, 219, 0.25);
 }
 .contact-form{
-
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 5px;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 15px;                
+    flex: 1;                   
+    max-width: 500px;
+    
 
 }
 .contact-form button{
@@ -318,7 +327,7 @@ body{
     transform: scale(0.97);
 }
 .contact-form input{
-    width: 600px;
+    max-width: 500px;
     padding: 14px 16px;
     border-radius:9px;
     font-size: 18px;
@@ -328,17 +337,28 @@ body{
     transition: all 0.3s ease;
 }
 .envelope{
-    display: inline;
-    width: 100px;
-    height: 100px;
-}
-/* footer */
-.footer {
     display: flex;
-    flex-wrap: wrap;
-    margin: 40px 15px 10px 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-radius: 9px;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 250px;              
+    height: 250px;             
+    flex-shrink: 0;
 
+
+}
+.envelope img{
+   width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.footer-socials a {
+    color: #0b1329;         
+    background-color: #fff;  
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }

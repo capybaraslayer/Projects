@@ -278,4 +278,5 @@ def penalizare(user_id, zile_intarziere):
 # populare_tables()
 # imprumuta_carte()
 # return_carte()
-actualizeaza_intarziere(1)
+# actualizeaza_intarziere(1)
+
