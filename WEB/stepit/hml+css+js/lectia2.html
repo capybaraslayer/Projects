@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="js2.js" defer></script>
+  </head>
+  <body>
+    <p>Lectia numaru 2,introducere</p>
+    <script>
+      let produsDisponibil = true;
+      let autentificat = true;
+      let sold = 1000;
+      let pret = 700;
+      if (produsDisponibil && autentificat && sold >= pret) {
+        console.log("Comanda efectuata");
+        document.write("Comanda efectuata");
+      } else {
+        console.log("Comanda esuata");
+        document.write("Comanda efectuata");
+      }
+      //operatorul ternar
+      //conditie ? valoare_adevarata:valoare_falsa
+      let varsta = 20;
+      let mesaj = varsta >= 18 ? "Major" : "Minor";
+      console.log(mesaj);
+      document.write("<br>" + mesaj);
+      //alegerea unei variante dintre mai multe posibile
+      /*
+            switch(valoare)
+            {
+                case valoare:
+                {cod;break;}
+                ....
+                case valoare_n:
+                    {cod:break;}
+                default:
+                    //cod implicit
+            }
+        */
+      let zi = 3;
+      switch (zi) {
+        case 1: {
+          console.log("Luni");break;
+        }
+        case 2: {
+          console.log("Marti");break;
+        }
+        case 3: {
+          console.log("Miercuri");break;
+        }
+        case 4: {
+          console.log("Joi");break;
+        }
+        case 5: {
+          console.log("Vineri");break;
+        }
+        case 6: {
+          console.log("Sambata");break;
+        }
+        case 7: {
+          console.log("Duminica");break;
+        }
+        default: {
+          console.log("Nu exista asa zi a saptamanii indica de la 1-7");
+        }
+      }
+      //instructiuni ciclice:for;while;do-while
+      /*for(initializare;conditie;modificarea){
+            instrunctiuni  
+      }*/
+     
+     for(let i=0;i<5;i++){
+        if (i%2==0){
+            document.write('<br>'+i);      
+        }
+      
+     }
+
+     //suma cifrelor
+    // let suma=0
+    // for(let i=1;i<=10;i++){
+    //     suma+=i;
+        
+    //  }
+    //  document.write('<br> suma='+suma);  
+     
+    //  //suma cifrelor indicate de client
+    //  let n=prompt('cite numere doresti sa sumezi:');
+    //  let sumaPare=0;
+    //  let sumaImpare=0;
+    //  for(let i=0;i<n;i++){
+    //     let numar=prompt('indica numaru'+(i+1));
+    //     if(Number(numar)%2==0){
+    //         sumaPare+=Number(numar);
+    //     }else{
+    //         sumaImpare+=Number(numar);
+    //     }
+    
+    //  }
+    // document.write('<br> suma pare='+sumaPare);  
+    // document.write('<br> suma impare='+sumaImpare);  
+    // let parola='1233';
+    // let verificare='';
+    // while(verificare!=parola){
+    //     verificare=prompt('Introdu parola');
+    // }
+    // document.write('<br> <h1><b>parola</b> a fost acceptata</h1>')
+    let i=1;
+    do{
+        console.log(i);
+        i++;
+    }while(i<=5);
+    
+   
+    
+    </script>
+  </body>
+</html>
