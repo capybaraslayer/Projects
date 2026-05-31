@@ -57,6 +57,6 @@
 // const candrive= varsta>=16 ? true:false;
 // console.log(candrive);
 
-let puncte=100
-const customerType=puncte>=100 ? 'gold':'silver';
-console.log(customerType)
+// let puncte=100
+// const customerType=puncte>=100 ? 'gold':'silver';
+// console.log(customerType)

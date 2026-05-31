@@ -21,7 +21,7 @@
 //     bark(){
 //         console.log('Ham')
 //     }
-//}
+// }
 // function getDog(name,breed,age,weightinPounds){
 //     return{
 //         name,
@@ -56,8 +56,8 @@
 //     }
 // }
 // function caine(name,breed,age,weightinPounds){
-//     //this{ };
-//     //adaugam proprietati la this
+//     this{ };
+//     adaugam proprietati la this
 //     this.name=name;
 //     this.breed=breed;
 //     this.age=age;
@@ -69,19 +69,19 @@
 //           console.log(this.name+': Ham');
 //     }
 
-//     //return this;
-    
-// // }
-// // const anotherDog=new caine('Sasiska','Lab',2,41);
-// // console.log(anotherDog)
+//     return this;
+
+// }
+// const anotherDog=new caine('Sasiska','Lab',2,41);
+// console.log(anotherDog)
 // const person={
 //     name:'Steven'
 // };
-// // console.log(person);
-// // person.favoriteFood='tacos'
-// // console.log(person)
-// // delete person.favoriteFood;
-// // console.log(person);
+// console.log(person);
+// person.favoriteFood='tacos'
+// console.log(person)
+// delete person.favoriteFood;
+// console.log(person);
 
 // person.eat=function(){
 //     console.log('start eating');
@@ -103,8 +103,8 @@
 // function add(num1,num2){
 //     return num1+num2;
 // }
-// // const n =add;
-// // console.log(n(2,3));
+// const n =add;
+// console.log(n(2,3));
 // console.log(add.length);
 
 // function Programer(name){
@@ -146,21 +146,21 @@
 //     console.log(element);
 // }
 
-const dog={
-    name:'Max',
-    age:4,
-    culoareOchilor:'albastrii'
-};
+// const dog={
+//     name:'Max',
+//     age:4,
+//     culoareOchilor:'albastrii'
+// };
 // for(const key in dog){
 //     console.log(dog[key]);
 // }
 
 
-const keys=Object.keys(dog);
+// const keys=Object.keys(dog);
 // console.log(keys);
-const values=Object.values(dog);
-//console.log(values);
-const entrees =Object.entries(dog);
+// const values=Object.values(dog);
+// console.log(values);
+// const entrees =Object.entries(dog);
 // console.log(entrees);
 
 // for(const key of Object.keys(dog)){
@@ -171,6 +171,36 @@ const entrees =Object.entries(dog);
 //     console.log(value);
 // }
 
-for(const entry of Object.entries(dog)){
-    console.log(entry);
-}
+// for(const entry of Object.entries(dog)){
+//     console.log(entry);
+// }
+// let a ={value:10};
+// let b={...a};
+
+// // Object.assign(b,a);
+
+// console.log(a);
+// console.log(b);
+// const name='Steven';
+// console.log(typeof name);
+
+// let anotherName = new String('Joe');   // O creezi prima dată
+// anotherName = new String('Maria');     // Îi schimbi valoarea (fără "let" în față)
+// anotherName = new String('Iliea');     // O schimbi din nou
+// console.log(anotherName);
+// console.log(typeof anotherName)
+// let sentence='A new sentence';
+// const doesincludeNew=sentence.includes('new');
+// console.log(doesincludeNew);
+
+//  console.log(sentence[3]);
+// const startsWithA=sentence.startsWith('A');
+// console.log(startsWithA);
+// const endsWithA=sentence.endsWith('A');
+// console.log(endsWithA);
+
+// let updateSentence=sentence.replace("A","C")
+// console.log(updateSentence);
+// let nume="catalin";
+// let fullName= `${nume} ma numesc asa`;
+// console.log(fullName);

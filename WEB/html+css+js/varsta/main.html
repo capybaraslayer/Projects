@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator de varsta</title>
+   
     <style>
         body{
             background-color: rgb(36, 94, 243);
@@ -28,14 +29,53 @@
             margin: 30px;
             padding: 10px;
             height: 80px;
+            gap: 200px;
         }
+        
         .form{
             background-color: white;
             border: none;
             padding: 20px;
+            width: 300px;
+            font-size: 20px;
             border-radius: 9px;
             color:black;
 
+        }
+        .calc{
+            background-color: white;
+            border: none;
+            padding: 20px;
+            width: 150px;
+            font-size: 20px;
+            border-radius: 9px;
+            color:black;
+            
+
+        }
+        .rezultate{
+            display: flex;
+            flex-direction:  row;
+            justify-content: space-evenly;
+            
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+        }
+        .varsta{
+            background-color: rgb(7, 7, 67);
+            margin: 20px;
+            width: 150px;
+            height: 80px;
+            border-radius: 9px;
+            color: white;
+            display: flex;
+            font-size: 24px;
+            justify-content: center;
+            align-items: center;
+
+            
         }
     </style>
 </head>
@@ -43,12 +83,14 @@
     <div class="container">
         <div class="form_container">
         <input class='form' type="date"> 
+        <button class="calc">Calculeaza</button>
         </div>
-        <button>Calculeaza</button>
         <h1>Varsta ta este</h1>
-        <div class="varsta">Ani</div>
-        <div class="varsta">Luni</div>
-        <div class="varsta">Zile</div>
+        <div class="rezultate">
+        <div class="varsta ani">Ani</div>
+        <div class="varsta luni">Luni</div>
+        <div class="varsta zile">Zile</div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
