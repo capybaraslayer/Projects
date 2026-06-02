@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Functii in js</p>
+    <script>
+        function f1(){
+            console.log("salutare din functie f1");
+        }
+        function f2(){
+            console.log("salutare din functie f2");
+            console.log("salutare din functie f2");
+        }
+        function f3(n){
+
+            for(let i =0;i<n;i++){
+            console.log("salutare din functie f3");    
+            }
+        
+        }
+        //functie nereturnabile
+        function afiseaza_nume(nume){
+            document.write('Numele este:'+nume+'<br>');
+        }
+        //functie returnabila
+        function suma(a,b,c){
+            return (a+b+c);
+        }
+        function salariu(salariubaza,nr_zile,procent){
+            
+            let sumaprocent = ((salariubaza*nr_zile)*procent)/100;
+            let salariufinal=(salariubaza*nr_zile)-sumaprocent;
+            // console.log("Salariu va fi de "+salariufinal+" cu procentul de "+procent);
+            return salariufinal;
+
+        }
+        f1();
+        f3(12);
+        f2();
+        afiseaza_nume('Ion');
+        afiseaza_nume('Catalin');
+        afiseaza_nume('Marian');
+        let x=suma(2,3,-8);
+        console.log('suma='+x) 
+        let n=10
+        let sumaa;
+        for(let i =1;i<n;i++){
+            let salariuZi=1000*i;
+            let nrZile=10+i;
+            let sal=salariu(salariuZi,nrZile,21);
+            console.log(`Pentru ${nrZile} de zile lucrate cu salariu zilnic de 
+                        ${salariuZi}lei  avem salariu de ${sal}`);
+            sumaa =+sal;
+
+        }
+        console.log("Suma totala pentru toti angajatii va fi de "+sumaa)
+    </script>
+</body>
+</html>
