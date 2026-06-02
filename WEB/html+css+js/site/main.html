@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceas</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(4, 4, 34);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #ceas{
+            background-image: url('clock.png');
+            background-size: cover;           /* Face imaginea de mărimea părintelui */
+            background-position: center;      /* O centrează perfect pe mijloc */
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            border: 1px solid white;
+            border-radius: 200px;
+            width: 400px;
+            height: 400px;
+            box-shadow: 0 0 25px rgba(255, 254, 254, 0.2);
+            
+        }
+        .clock-face{
+            position: relative;
+            color:white;
+            font: 30px;
+            width: 75%;
+            height: 75%;
+        }
+        .mana{
+            width: 50%;
+            height: 6px;
+            background-color:black;
+            position: absolute;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: all 0.05s;
+            transition-timing-function:cubic-bezier(0.1,2.7,0.58,1);
+        }
+    
+        .secunde{
+            background-color: white;
+            height: 2px;
+        }
+        .minute{
+            background-color: red;
+            height: 4px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="ceas">
+        <div class="clock-face">  
+            <div class="mana ore"></div>
+            <div class="mana minute"></div>
+            <div class="mana secunde"></div>
+        </div>
+
+    </div>
+     <script>
+        const mana_seconds=document.querySelector('.mana.secunde');
+        const mana_minute=document.querySelector('.mana.minute');
+        const mana_ore=document.querySelector('.mana.ore');
+        function setDate(){
+            
+            const now=new Date;
+            const seconds=now.getSeconds();
+            const ore=now.getHours();
+            const minute=now.getMinutes();
+            const secondsDegrees=((seconds/60)*360)+90;
+            const minutesDegrees=((minute/60)*360)+90;
+            const oreDegrees=((ore/12)*360)+90;
+            mana_seconds.style.transform=`rotate(${secondsDegrees}deg)`;
+            mana_minute.style.transform=`rotate(${minutesDegrees}deg)`;
+            mana_ore.style.transform=`rotate(${oreDegrees}deg)`;    
+
+        }
+        setInterval(setDate,1000);
+
+    </script>
+</body>
+</html>
