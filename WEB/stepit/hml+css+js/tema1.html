@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lungime=12;
+        let latime=13;
+        let raza=4;
+        const pi=3.14;
+        let pret=12000;
+        let procent=21;
+        let anNastere=2008;
+        let euro=12;
+        let ariaDreptunghiului=(lungime,latime)=>{
+            return lungime*latime;
+        }
+        console.log(`Aria dreptunghiului cu lungimea ${lungime}cm si latimea ${latime}cm este ${ariaDreptunghiului(lungime,latime)}cm`);
+        let perimetrulDreptunghiului=(lungime,latime)=>{
+            return 2*(lungime+latime);
+        }
+        console.log(`Perimetrul dreptunghiului cu lungimea ${lungime}cm si latimea ${latime}cm este ${perimetrulDreptunghiului(lungime,latime)}cm`);
+        let ariaCerc=(raza)=>{
+            return pi*(raza*raza);
+        }
+        console.log(`Aria cercului cu raza ${raza} este ${ariaCerc(raza)}`);
+        let lungimeaCerc =()=>{
+            return 2*(pi*raza);
+        }
+        console.log(`Lungimea cercului cu raza ${raza} este ${lungimeaCerc(raza)}`);
+        let calculReducere=(pret,procent)=>{
+            return pret-(pret*procent)/100;
+        }
+        console.log(`Pretul final cu procentul de reducere ${procent}% si pretul initial de ${pret}lei este ${calculReducere(pret,procent)}lei`);
+        let calculTVA=(pret,procent)=>{
+            return pret+(pret*procent)/100;
+        }
+        console.log(`Pretul final cu procentul de TVA ${procent}% si pretul initial de ${pret}lei este ${calculTVA(pret,procent)}lei`);
+        let calculeazaVarsta=(anNastere)=>{
+            return 2026-2008;
+        }
+        console.log(`Mam inascut in anul ${anNastere} si am varsta de ${calculeazaVarsta(anNastere)}`);
+        let conversieEuroLei=(euro)=>{
+            return euro*19.5;
+
+        }
+        console.log(`Cu cursul de 19,5 ${euro}€ in lei este ${conversieEuroLei(euro)}lei`);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
