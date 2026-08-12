@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <link rel="stylesheet" href="localstorage_style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Gestionare produse</h1>
+        <div class="formular">
+            <input type="text" id="denumire" placeholder="Denumire produs">
+            <input type="number" id="pret" placeholder="Pret produs">
+            <input type="number" id="cantitate" placeholder="Cantitate produs">
+
+            <button id="salveaza">Adauga produs</button>
+            <button id="anuleaza" class="ascuns">Anuleaza produs</button>
+        </div>
+        <p id="mesaj"></p>
+        <h3 id="totalGeneral">Total:0</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nr.</th>
+                    <th>Produs</th>
+                    <th>Pret</th>
+                    <th>Cantitate</th>
+                    <th>Actiuni</th>
+                </tr>
+            </thead>
+            <tbody id="tabel"></tbody>
+        </table>
+    </div>
+
+
+
+    <script src="localstorage_script.js"></script>
+</body>
+</html>

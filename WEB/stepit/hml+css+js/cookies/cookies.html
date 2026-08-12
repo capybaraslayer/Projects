@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <link rel="stylesheet" href="cookies.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="titluPagina">Preferintele utilizatorului</h1>
+        <div class="formular">
+            <label for="nume">Numele utilizatorului</label>
+            <input type="text" id="nume" placeholder="Introduceti numele">
+            <label for="limba">Limba interfata</label>
+            
+            <select id="limba">
+                <option value="ro">Romana</option>
+                <option value="en">Engleza</option>
+                <option value="ru">Rusa</option>
+            </select>
+
+            <label>Tema paginii</label>
+            <div class="teme">
+                <label>
+                    <input type="radio" name="tema" value="light" checked>Light
+                </label>
+                <label>
+                    <input type="radio" name="tema" value="dark" checked>Dark
+                </label>
+
+            </div>
+
+            <button id="salveaza">Salveaza preferintele</button>
+            <button id="sterge">Sterge preferintele</button>
+        
+            <p id="mesaj"></p>
+
+        </div>
+        <div class="rezultat">
+            <h2 id="salut">Salut</h2>
+            <p>Tema selectata:
+                <strong id="temaAfisata">Light</strong>
+            </p>
+
+            <p>Tema selectata:
+                <strong id="limbaAfisata">Romana</strong>
+            </p>
+        </div>
+        
+    </div>
+
+    <script src="cookies.js"></script>
+</body>
+</html>

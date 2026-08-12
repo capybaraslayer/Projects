@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Tablouri(unidimensional/bidimensional)</p>
+    <script>
+    //     let note=[1,9,10,8];
+    //     //console.log(note[0]);
+    //     let fructe=['mere','pere','prune'];
+    //     //console.log(fructe[0]);
+
+    //     //afisare a cite un element
+    //     // document.write(fructe[1]+'<br>')
+    //     // for(let i =0;i<fructe.length;i++){
+    //     //     //console.log(fructe[i]);
+    //     // }
+
+    //     //modificarea
+    //     fructe[1]='harbuz';
+    //     //console.log(fructe);
+
+    //     //adaugarea elementelor
+    //     //push()-adaugarea la sfarsit
+    //     fructe.push('masline');
+    //     //console.log(fructe);
+    //     //unshift()-adauga element la inceput
+    //     fructe.unshift('cirese');
+    //     //console.log(fructe);
+    //     //stergerea ultimului element
+    //     //pop()-sterge ultimul element
+    //     //shift()-sterge primul element
+    //     // fructe.shift();
+    //    // fructe.pop();
+    //     //console.log(fructe);
+    //     // for(let i=0;i<fructe.length;i++){
+    //     //     console.log(fructe[i]);
+    //     //     document.write(fructe[i]+'<br>');
+    //     // }
+    //     // //sa se determine suma elementelor
+
+    //     // let numere=[12,12,321.21,212123.21,123,-212];
+    //     // let suma=0;
+    //     // for(let i =0;i<numere.length;i++){
+    //     //     suma+=numere[i];     
+    //     // }
+    //     // document.write(`Suma numrelor este:${suma}`)
+    //     // //sa se determina media note studentului
+
+    //     // let nota=[];
+    //     // let media=0;
+    //     // for(let i=0;i<5;i++)
+    //     // {
+    //     //     let x=Number(prompt('Introduceti nota pe care ai obtinuto'));
+    //     //     media+=x;
+    //     // }      
+    //     // console.log(`Media studentului este ${media/media.length}`)
+    //     // let s=0;
+    //     // let k=0;
+    //     // let nota=[];
+    //     // for(let i=0;i<1000;i++){
+    //     //     if(prompt('Doriti sa continuati')=='da'){
+    //     //     let x=Number(prompt('introduceti nota pe care o aveti'));
+    //     //     nota.push(x);
+    //     //     }else{
+    //     //         break;
+    //     //     }
+    //     // }
+    //     //  for(let i=0;i<5;i++){
+    //     //     document.write(nota[i]+'<br>')
+    //     // }   
+    //     // for(let i=0;i<nota.length;i++){
+    //     //     s+=nota[i];
+    //     //     k++;
+    //     // }
+    //     // document.write('Media='+(s/k)+'<br>')
+    //     let s=0;
+    //     let k=0;
+    //     let nota=[];
+    //         while(prompt("Mai doresti sa continui")=='da'){
+    //                 let x=Number(prompt('introduceti nota pe care o aveti'));
+    //                 if (x>0&&x<=10) nota.push(x);  
+    //              }
+        
+    //         document.write("Notele introduse sunt:<br>");
+    //         for(let i = 0; i < nota.length; i++){
+    //             document.write(nota[i] + '<br>');
+    //         }
+
+            
+    //         for(let i = 0; i < nota.length; i++){
+    //             s += nota[i];
+    //         }
+
+    //         let medie = nota.length > 0 ? (s / nota.length) : 0;
+    //         // document.write("Media notelor este: " + medie);  
+
+    //         // sa se determine nota maxima si nota minima,totodata sa se determine 
+    //         // cantitatea de minime si maxime
+    //     let min=nota[0];
+    //     let max=nota[0];
+    //     for(let i=0;i<nota.length;i++){
+    //         if (min>nota[i]) min=nota[i];
+    //         if (max<nota[i]) max=nota[i];
+    //     }
+    //     let kmin=0;
+    //     let kmax=0;
+    //     for(let i=0;i<nota.length;i++){
+    //         if (nota[i]==min) kmin+=1;
+    //         if (nota[i]==max) kmax+=1;
+    //     }
+    //     document.write(`Min ${min} Max ${max}`+"<br>");
+    //     document.write(`${min} sa repetat de ${kmin}  ${max} sa repetat de ${kmax}`);
+
+        //avem 2 liste cu valori aleatorii
+        //sa se determine lista 3 ce va reprezenta suma elementelor pe pozitii
+        let x=[];
+        let y=[];
+        let w=[];
+        let n=Number(prompt('Indica lungimea listei:'));
+        for(let i =0;i<n;i++){
+            x[i]=Math.floor(Math.random()*100)+1;
+            y[i]=Math.floor(Math.random()*50)+1;
+            w[i]=x[i]+y[i];
+        }
+        console.log(x);
+        console.log(y);
+        console.log(w);
+
+    </script>
+</body>
+</html>

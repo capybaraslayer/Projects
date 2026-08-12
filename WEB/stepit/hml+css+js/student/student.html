@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Dinamic</title>
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+    <!--zona de autenficare-->
+    <div id="loginPage" class="login-page">
+        <div class="login-card">
+            
+            <div class="login-icon">Js</div>
+            <h1>Autentificare</h1>
+            <p class="login-subtitle">Introduceti datele pentru a accesa Dashboard-ul</p>
+            
+            <div class="form-group">
+                <label for="username">Nume utilizator</label>
+                <input  type="text" id="username" placeholder="Introduceti utilizatorul">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Parola</label>
+                <input  type="password" id="password" placeholder="Introduceti parola">
+            </div>
+
+            <div class="captcha-box">
+                <div>
+                    <span>Rezolvatii calculul:</span>
+                    <strong id="captchaQuestion"></strong>
+                </div>
+                <button type="button" id="refreshCaptcha"
+                class="btn-refresh" title="Genereaza alt calcul" >
+                 ↻   
+                </button>
+            </div>
+            <div class="form-group">
+                <label for="captchaAnswer">Rezultat calculului</label>
+                <input  type="number" id="captchaAnswer" placeholder="Introduceti rezultatul">
+            </div>
+            
+
+            <button id="loginButton" class="btn-login">Autentificare</button>
+            <p id="loginMessage" class="login-message"></p>\
+            <div class="demo-data">
+                <strong>Date pentru testare</strong>
+                <span>Utilizator: admin</span>
+                <span>Parol: 1234</span>
+
+            </div>
+        </div>
+    </div>
+    <!---Aplicatia principala-->
+    <div  id="dashboardApp" class="app ascuns">
+        <!---Meniu-->
+        <aside id="menu"></aside>
+
+        <main class="content">
+            <div class="top-bar">
+                <div>
+                    <p class="welcome-text">Bun venit</p>
+                    <h1 id="pageTitle">Dashboard</h1>
+                </div>
+
+                <button id="logoutButton" class="btn-logout">Deconectare</button>
+            </div>
+            <!--cardurile care vor fi generate din JS-->
+            <div id="cards"></div>
+        </main>
+        
+    </div>
+
+    <script src="student.js"></script>
+</body>

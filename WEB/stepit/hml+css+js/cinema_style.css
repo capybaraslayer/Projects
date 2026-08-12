@@ -1,0 +1,108 @@
+body
+{
+
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: whitesmoke;
+}
+
+.container
+{
+    width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+
+}
+
+h1,h2
+{
+    text-align: center;
+    color: #243b8f;
+}
+
+.formular
+{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+input,select
+{
+    padding: 12px;
+    text-align: center;
+    border: 2px solid #cbd6f0;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button
+{
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #243b8f;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover{background-color: #172861;}
+
+
+#mesaj
+{
+    text-align: center;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+.succes 
+{
+    color: lawngreen;
+}
+
+.eroare{color: red;}
+
+.input-eroare
+{
+    border-color: red;
+    background: #ffecec;
+}
+
+
+#sala
+{
+    display: grid;
+    grid-template-columns: repeat(5,70px);
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.loc
+{
+    height: 55px;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+.liber{background: green;}
+.ocupat{background: red;}
+
+.statistici
+{
+    margin-top:25px;
+    background: #f2f5ff;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <h1>My Library</h1>
+    <div id="mesaj"></div>
+    <div class="container form">
+        <form id="formular">
+            <label for="titlu">Titlul cartii</label>
+            <input type="text" id="titlu" >
+
+            <label for="autorul">Autorul</label>
+            <input type="text" id="autorul" >
+
+            <select id="categorie" >
+                <option value="">Nu are categorie</option> 
+                <option value="thriller">Thriller</option> 
+                <option value="horror">Horror</option> 
+                <option value="science">Science</option> 
+               <option value="romance">Romance</option> 
+            </select>
+
+            <label for="an">Anul aparitiei</label>
+            <input type="number" id="an" >
+        
+            
+            <label for="nr_pagini">Numarul de pagini</label>
+            <input type="number" id="nr_pagini" >
+
+            <input type="checkbox" id="disp" >
+            <label for="disp">Disponibilitate</label>
+
+            <button  type="submit">Adauga</button>
+            <button type="reset" >Reseteaza</button>
+        </form>
+    </div>
+    <div class="container tabel">
+    <table>
+        <thead>
+            <tr>
+                <th>Nr.</th>
+                <th>Titlu</th>
+                <th>Autor</th>
+                <th>Categorie</th>
+                <th>An</th>
+                <th>Pagini</th>
+                <th>Disponibila</th>
+                <th>Editare</th>
+                <th>Stergere</th>
+            </tr>
+
+        </thead>
+        <tbody id="date">
+            
+        </tbody>
+    </table>
+    </div>
+    <div class="container stat"></div>
+    <script src="biblioteca.js"></script>
+</body>
+</html>
