@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+    <style>
+        body{
+            margin: 0;
+            background: #1e825a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .titlu{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+            line-height: 1.6;
+            font-weight: bold;
+
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            
+        }
+        .caseta_alba input{            
+            font-size: 18px;           
+            font-family: sans-serif;   
+            outline: none;
+            overflow-wrap: break-word; 
+            word-break: break-all;
+            resize: none;
+
+        }
+        .caseta_alba{
+            width: 100%;
+            height: 100%;         
+            font-size: 18px; 
+            border: 2px solid #000000 ;
+            box-shadow: 0 0 0 3px white;
+            border-radius: 6px; 
+            outline: none; 
+            padding: 10px;
+            
+        }
+        .btn{
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            width: 40px;
+            z-index: 10;
+            cursor: pointer;
+            padding: 0;
+            background: transparent;
+            border: none;
+        }
+        .btn img{
+            width: 40px;
+            height: 40px;
+            display: block;
+        }
+        .wrapper{
+            position: relative;
+            width: 800px;
+            height: 200px;
+        }
+        .raspuns_list{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        
+        
+        }
+        .text{
+            color: #000000;
+            z-index: 1000;
+            border-radius: 6px;
+            border: none;
+            background-color: #027145;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="titlu"><h1>Introduce toate alegerile tale separate cu o virgula<br>
+                                Press enter cand esti gata.</h1></div>
+        <div class="wrapper">
+            <textarea class="caseta_alba" rows="10" cols="50" placeholder="Type your choices..."></textarea>
+            <button class="btn"><img src="rotate-right.png"></button>
+        </div>
+        <div class="raspuns_list">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

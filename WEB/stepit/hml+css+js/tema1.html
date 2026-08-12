@@ -7,53 +7,59 @@
 </head>
 <body>
     <script>
-        let lungime=12;
-        let latime=13;
-        let raza=4;
-        const pi=3.14;
-        let pret=12000;
-        let procent=21;
-        let anNastere=2008;
-        let euro=12;
-        let ariaDreptunghiului=(lungime,latime)=>{
-            return lungime*latime;
+        adunare=(valoare,elementCurent)=>{
+           return valoare+elementCurent; 
         }
-        console.log(`Aria dreptunghiului cu lungimea ${lungime}cm si latimea ${latime}cm este ${ariaDreptunghiului(lungime,latime)}cm`);
-        let perimetrulDreptunghiului=(lungime,latime)=>{
-            return 2*(lungime+latime);
+        scadere=(valoare,elementCurent)=>{
+           return valoare-elementCurent; 
         }
-        console.log(`Perimetrul dreptunghiului cu lungimea ${lungime}cm si latimea ${latime}cm este ${perimetrulDreptunghiului(lungime,latime)}cm`);
-        let ariaCerc=(raza)=>{
-            return pi*(raza*raza);
+        inmultire=(valoare,elementCurent)=>{
+           return valoare*elementCurent; 
         }
-        console.log(`Aria cercului cu raza ${raza} este ${ariaCerc(raza)}`);
-        let lungimeaCerc =()=>{
-            return 2*(pi*raza);
+        impartire=(valoare,elementCurent)=>{
+           return valoare/elementCurent; 
         }
-        console.log(`Lungimea cercului cu raza ${raza} este ${lungimeaCerc(raza)}`);
-        let calculReducere=(pret,procent)=>{
-            return pret-(pret*procent)/100;
-        }
-        console.log(`Pretul final cu procentul de reducere ${procent}% si pretul initial de ${pret}lei este ${calculReducere(pret,procent)}lei`);
-        let calculTVA=(pret,procent)=>{
-            return pret+(pret*procent)/100;
-        }
-        console.log(`Pretul final cu procentul de TVA ${procent}% si pretul initial de ${pret}lei este ${calculTVA(pret,procent)}lei`);
-        let calculeazaVarsta=(anNastere)=>{
-            return 2026-2008;
-        }
-        console.log(`Mam inascut in anul ${anNastere} si am varsta de ${calculeazaVarsta(anNastere)}`);
-        let conversieEuroLei=(euro)=>{
-            return euro*19.5;
+        function calculator(){
+            let egal=false;
+            let valoare=0;
+            while(!egal){
+    
+                let operatiune=prompt('Operatiune');
+                if (operatiune=='='){
+                    egal=true;
+                    break;
+                }
+                let elementCurent=Number(prompt('Valoare'));
+                if(!Number(elementCurent))
+                {
+                    alert('Introduceti doar cifre');
+                    continue;
+                }
+                switch (operatiune) {
+                    case '+': valoare = adunare(valoare, elementCurent); break;
+                    case '-': valoare = scadere(valoare, elementCurent); break;
+                    case '*': valoare = inmultire(valoare, elementCurent); break;
+                    case '/': 
+                        if (elementCurent === 0) {
+                            alert('Nu poți împărți la zero!');
+                        } else {
+                            valoare = impartire(valoare, elementCurent);
+                        }
+                        break;
+                    default:
+                        alert('Simbol invalid!');
+               }
 
+                
+        
+            }
+            document.write('<h1>'+`Rezultat:${valoare}`+'</h1>');
+            
+        
+        
         }
-        console.log(`Cu cursul de 19,5 ${euro}€ in lei este ${conversieEuroLei(euro)}lei`);
-
-
-
-
-
-
+        calculator();
+        
 
     </script>
 </body>
