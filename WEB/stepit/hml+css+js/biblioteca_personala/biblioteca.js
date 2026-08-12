@@ -8,6 +8,9 @@ let nr_pagini =document.getElementById('nr_pagini');
 let disponibil =document.getElementById('disp');
 let formular= document.getElementById('formular');
 let tbody=document.getElementById('date');
+let pop =document.getElementById('pop');
+let btnda =document.getElementById('da');
+let btnnu =document.getElementById('nu');
 
 
 
@@ -102,6 +105,7 @@ formular.addEventListener("submit",function(e)
     afiseazaMesaj('Cartea a fost inregistrata cu succes!','succes');
     indexEditare=null;
 });
+
 
 tbody.addEventListener('click',function(e){
     if(e.target.textContent=='Șterge')
