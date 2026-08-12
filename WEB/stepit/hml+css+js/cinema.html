@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rezervare la cinema</title>
+        <link href="cinema_style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Rezervare locuri la cinema</h1>
+            <div class="formular">
+                <input type="text" id="nume" placeholder="nume client">
+                <select id="film">
+                    <option value="">Alege filmul</option>
+                    <option value="Avatar">Avatar</option>
+                    <option value="Titan">Titan</option>
+                    <option value="Spider-man">Spider-man</option>
+                </select>
+                <input type="number" id="loc" placeholder="Numar loc 1-20">
+                <button id="rezerva">Rezerva loc</button>
+
+            </div>
+            <p id="mesaj"></p>
+            <h2>Locuri disponibile</h2>
+            <div id="sala"></div>
+            <div class="statistici">
+                <p id="total" >Total locuri: 20</p>
+                <p id="ocupate" >Total ocupate: 0</p>
+                <p id="total" >Locuri libere: 20</p>
+            </div>
+
+        </div>
+
+
+
+        <script src="cinema.js"></script>
+    </body>
+</html>

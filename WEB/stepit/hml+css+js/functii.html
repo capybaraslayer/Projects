@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Functii definite de utilizator</title>
+    </head>
+    <body>
+        <script>
+            
+            let v1=[];
+            let v2=[];
+            let marimeVector=Number(prompt("Indica marimea vectorului: "));
+            function citireElemente(v,vv,n)
+            {
+               for(let i =0;i<n;i++){
+                   v[i] = Math.floor(Math.random() * 201) - 100;
+                   vv[i] = Math.floor(Math.random() * 201) - 100; 
+        
+                } 
+            }
+            function  afisare(v,vv)
+            {
+               let text1 = "Lista 1: " + v.join(", ");
+               let text2 = "Lista 2: " + vv.join(", ");
+               console.log(text1);
+               console.log(text2);
+               document.write(text1 + "<br>");
+               document.write(text2);                                                            
+            }
+            function suma(v,vv)
+            {
+            
+                let nrImpare=v.filter(x=>x%2!==0);       
+                let nrPare=vv.filter(x=>x%2===0);
+                let produsImpare = nrImpare.length > 0 ? nrImpare.reduce((acc, x) => acc * x, 1) : 0;
+                let produsPare = nrPare.length > 0 ? nrPare.reduce((acc, x) => acc * x, 1) : 0;
+
+                let suma=0;
+                suma=produsImpare+produsPare;
+
+                return suma;
+
+            }
+            function nrElementeNegative(v,vv,n)
+            {   let numar=0
+                for(let i =0;i<n;i++)
+                {
+                    if((v[i]<0&&v[i]%2===0)||(vv[i]<0&&v[i]%2===0))
+                    {
+                        numar+=1;
+                    }
+
+                }
+                if (numar==0)
+                {
+                    document.write('<br>'+'Nu satisface conditia!');
+                }
+                else 
+                {
+                     document.write('<br>'+'Numarul de elemente negative aflate pe pozitii pare din ambele tablouri:'+numar);
+                }
+            
+
+            }
+            function mediaAritmetica(v,vv)
+            {
+                let elemente=v.filter(x=>(x>6 && x<25));
+                let elemente1=vv.filter(x=>(x>26 && x<50));
+                let listaTot=[]
+                while (elemente.length>0 || elemente1.length>0)
+                {
+                    if (elemente.length > 0) {
+                       listaTot.push(elemente.shift());
+                    }
+                    if (elemente1.length > 0) {
+                        listaTot.push(elemente1.shift());
+                    }
+
+                }
+                if (listaTot.length===0) 
+                {
+                    return console.log('Nu exista elemente care respecta conditiile!')
+                }
+                let suma=listaTot.reduce((acc,x)=>{return acc+x;},0);
+                let MediaArit=suma/listaTot.length;
+                return MediaArit;
+                
+            }
+            function sumaMaxMin(v,vv,n){
+
+                let max=v[0];
+                let min=vv[0];
+                 for (let i = 0; i < n; i++)
+                {
+                    if (v[i] > max)
+                    {
+                        max = v[i];
+                    }
+                }
+
+                for (let i = 0; i < n; i++)
+                {
+                    if (vv[i] < min) {
+                    min = vv[i];
+                    }
+                }
+                
+                document.write("<br>Maximul din prima listă: " + max + "<br>");
+                document.write("Minimul din a doua listă: " + min + "<br>");
+                document.write("<b>Suma dintre maximul primei liste și minimul celei de-a doua este: " + (max+min)+ "</b>");
+
+
+            }
+            citireElemente(v1,v2,marimeVector);
+            afisare(v1,v2);
+            document.write('<br>'+'Suma dintre produsul elementelor impare din primul tablou si ce le pare din al2 tablou:'+suma(v1,v2));
+            nrElementeNegative(v1,v2);
+            document.write('<br>'+'Media aritmetica a celor doua intervale:'+(mediaAritmetica(v1,v2)));     
+            sumaMaxMin(v1,v2,marimeVector);
+
+    
+
+
+
+
+
+
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+              /*
+              se dau 2 tablouri
+              1. sa se detrmine suma elementelor impare ale tablourilor
+              2. sa se determine numarul elementelor impare de pe pozitii pare ale tablourilor
+              3. media aritmetica a elementelor pare din tabloul 1 si elementelor impare din tabloul 2
+              4. afisarea elementelor pozitive din prima jumatate a tabloului 1 si elementele negative
+              din a doua jumatate a listei 2
+
+
+          function add(v,m)
+          {
+             for(let i=0;i<m;i++)
+              {
+                  v[i]=Math.floor(Math.random()*100)+1;
+              }
+          }
+
+          function suma_elementelor(v,m)
+          {
+              let suma=0;
+              for(let i=0;i<m;i++)
+              {
+                  if(v[i]%2!==0)
+                  {
+                      suma+=v[i];
+                  }
+              }
+            return suma;
+          }
+
+
+          function nr_elementelor(v,vv,m)
+          {
+              let nr=0;
+              for(let i=0;i<m;i=i+2)
+              {
+                  if((v[i]%2!==0)||(vv[i]%2!==0))
+                  {
+                      nr+=1;
+                  }
+
+              }
+            return nr;
+          }
+
+      //3. media aritmetica a elementelor pare din tabloul 1 si elementelor impare din tabloul 2
+          function media_elementelor(v,vv,m)
+          {
+              let nr=0;
+              let suma=0;
+              for(let i=0;i<m;i++)
+              {
+                  if(v[i]%2===0)
+                  {
+                      nr+=1;
+                      suma+=v[i];
+                  }
+
+                  if(vv[i]%2!==0)
+                  {
+                      nr+=1;
+                      suma+=vv[i];
+                  }
+              }
+            return suma/nr;
+          }
+
+
+      //   4. afisarea elementelor pozitive din prima jumatate a tabloului 1 si elementele negative
+      //       din a doua jumatate a listei 2
+      function afis_elementelor(v,vv,m)
+          {
+
+              for(let i=0;i<m;i++)
+              {
+                  if(i<m/2)
+                  {
+                      if(v[i]>=0)
+                        console.log(v[i]+" ");
+                  }
+                  else
+                  {
+                    if(vv[i]<0)
+                        console.log(vv[i]+" ");
+                  }
+
+
+              }
+
+          }
+
+
+           let v1=[];
+           let v2=[];
+
+           let n;//numarul de elemente ale tablourilor
+           n=10;
+           add(v1,n);
+           console.log(v1);
+           add(v2,n);
+           console.log(v2);
+
+           let s=suma_elementelor(v1,n)+suma_elementelor(v2,n);
+           console.log('suma elmentelor impare este: '+s);
+           document.write('suma elmentelor impare este: '+s+'
+      ');
+
+           let k=nr_elementelor(v1,v2,n);
+           console.log('numarul elmentelor pare de pe pozitii impare este: '+k);
+           document.write('numarul elmentelor pare de pe pozitii impare este: '+k+'
+      ');
+
+          let m=media_elementelor(v1,v2,n);
+           console.log('media elementelor este: '+m);
+           document.write('media elementelor este: '+m+'
+      ');
+
+           afis_elementelor(v1,v2,n);*/
+          //functii de prelucrarea a tablourilor
+          //1.map transforma fiecare element al listei si creeaza un tablou
+          //sintaxa; let tablou_nou=vector.map(functie)
+          //dublare numerelor unui tablou
+          let numere =[1,3,4,2,34,5,33];
+          let dublat=numere.map(function(x){return x*2;})
+          console.log(numere);
+          console.log(dublat);
+          let dublat1=numere.map(x=>x*3)
+          console.log(numere);
+          console.log(dublat1);
+          document.write(dublat1.join(', '))
+
+          //filter
+          //sa se determine numerele pare
+          let pare=numere.filter(x=>x%2===0);
+          console.log(dublat1);
+          document.write('<br>'+pare.join(', '))
+          //reduce()-transforma intregul tablou intro singura valoare
+          //sa se determine suma elementelor
+          let suma=numere.reduce(function(acc,x){return acc+x},0)
+          console.log('suma='+suma);
+          let elevi=['maria','ion','catalin'];
+          elevi.forEach(function(nume){console.log(nume)});
+          elevi.forEach(nume=>document.write(nume+'<br>');
+          //some() verifica daca macar cel putin un element respecta conditia
+
+          let existapar=numere.some(x=>x%2===0);
+         if(existapar)
+         console.log('da, intradevar avem cel putin un numar par');
+         else
+         console.log('Nu avem nici-un numar par');
+
+    </script>
+  </body>
+</html>

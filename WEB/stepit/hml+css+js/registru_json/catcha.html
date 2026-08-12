@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body
+        {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .sign { display: none; }
+        .container
+        {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            padding: 25px;
+            gap: 14px;
+            border-radius:15px;
+
+        }        
+        .inregistrare
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn-wraper
+        {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .go-btn-wraper
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .signup-line
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        p
+        {
+            text-align: center;
+            font-size: 22px;
+
+        }
+        input
+        {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 18px;
+
+        }
+        button
+        {
+            padding: 12px;
+            border-radius: 8px;
+            width: 20%;
+            border: none;
+            background: rgb(30, 133, 243);
+            font-size: 18px;
+
+        }
+        
+    </style
+</head>
+<body>
+    <div class="container">
+
+        <div class="inregistrare">
+            <div class="log"></div>
+            <input id="login-nume" placeholder="Nume">
+            <input id="login-parola" type="password" placeholder="Parolă">
+            <div class="btn-wraper">
+                <button id="login-btn">Login</button>
+            </div>
+            <p>Nu ai un cont?</p>
+            <div class="signup-line">
+            <p>Apasă aici pentru a face sign up -></p>
+            <button id="go-signup-btn">GO</button>
+</div>
+        </div>
+
+        <div class="captcha">
+            <canvas id="captcha-canvas" width="120" height="40"></canvas>
+            <input id="captcha-input" placeholder="Introdu codul">
+            <div class="btn-wraper">
+            <button id="verifica-captcha-btn">Verifică</button>
+            </div>
+        </div>
+
+        <div class="sign">
+            <input id="signup-data-nastere" type="date">
+            <input id="signup-nume" placeholder="Nume">
+            <input id="signup-parola" type="password" placeholder="Parolă">
+            <div class="btn-wraper">
+            <button id="signup-btn">Sign up</button>
+            </div>
+            <p>Bine ai venit!!!</p>
+        </div>`
+
+    </div>
+
+    <script src="captcha.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

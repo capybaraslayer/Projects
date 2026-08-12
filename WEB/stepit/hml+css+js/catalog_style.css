@@ -1,0 +1,130 @@
+body
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef3ff;
+}
+
+.container
+{
+    width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.12);
+}
+h1
+{
+    text-align: center;
+    color: #142649;
+}
+
+.fomr-box
+{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+input
+{
+    padding: 12px;
+    border: 2px solid #c8d4f0;
+    font-size: 16px;
+}
+
+input:focus
+{
+    outline: none;
+    border-color: #244b9b;
+}
+button
+{
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: #244b9b;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+
+    
+}
+button:hover
+{
+    background: #183775;
+}
+
+#mesaj
+{
+    width: 100%;
+    font-weight: bold;
+}
+.eroare
+{
+    color: red;
+}
+
+.succes
+{
+    color: green;
+}
+
+.input-eroare
+{
+    border-color:red ;
+    background: #ffecec;
+}
+
+.statistica
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f3f6ff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th
+{
+    background:#244b9b;
+    color: white;
+    padding: 12px;
+
+}
+
+td
+{
+    padding: 10px;
+    text-align: center;
+    border-bottom:1px solid #dddd ;
+
+}
+
+.promovat
+{
+    background-color: #c8d4f0;
+    color: green;
+    font-weight: bold;
+}
+
+.nepromovat
+{
+    background-color: #ffe9e9;
+    color: red;
+    font-weight: bold;
+}
+
+.btn-sterge:hover
+{
+    background: red;
+}

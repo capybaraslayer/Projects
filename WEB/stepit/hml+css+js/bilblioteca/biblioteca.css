@@ -1,0 +1,67 @@
+body
+{
+    margin: 0;
+    background:rgb(197, 219, 227);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.app
+{
+    display: flex;
+    min-height: 100vh;
+}
+
+#menu
+{
+    background:rgb(2, 2, 66);
+    width: 300px;
+    padding: 12px;
+    color: white;
+    
+
+}
+
+#pageTitle
+{
+    font: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    padding: 12px;
+    margin-left: 20px;
+    border-radius: 12px;
+    text-align: center;
+    background: #244b9b;
+}
+
+.den
+{
+    margin-top: 20px;
+    font-size: 48px;
+    text-align: left;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+
+}
+
+.den:hover{ border-color: #244b9b;}
+
+.btn-menu
+{
+    display: block;
+    color: white;
+    background: transparent;
+    font-size: 28px;
+    margin: 20px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    width: 80%;
+    text-align: left;
+
+
+}
+
+.btn-menu:hover
+{
+    background:rgba(255, 255, 255, 0.18) ;
+}

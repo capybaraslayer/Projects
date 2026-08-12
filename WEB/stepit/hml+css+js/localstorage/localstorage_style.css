@@ -1,0 +1,106 @@
+body
+{
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background: #eef3ff;
+}
+
+.content
+{
+    width: 850px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.12);
+}
+
+h1{color: #244b9b;
+text-align: center;}
+
+.formular
+{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input
+{
+    padding:10px;
+    border: 2px solid #cbd6ed;
+    border-radius: 7px;
+}
+
+button
+{
+    padding: 10px 14px;
+    border: none;
+    border-radius: 7px;
+    background: #244b9b;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover
+{
+    opacity: 0.85;
+}
+
+.btn-sterge
+{
+    background: #d62828;
+}
+
+.btn-editare
+{
+    border: #1e6407;
+}
+
+.ascuns
+{
+    display: none;
+}
+
+.eroare-input
+{
+    border-color: red;
+    background:#f5d6d6;
+}
+
+#mesaj
+{
+    min-height: 22px;
+    font-weight: bold;
+
+}
+
+.succes
+{
+    color: green;
+
+}
+
+.eroare-input
+{
+    color: red;
+}
+
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th
+{
+    background: #244b9b;
+    color: white;
+    padding: 10px;
+}
+td
+{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}

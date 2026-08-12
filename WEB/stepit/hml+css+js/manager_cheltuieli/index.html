@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+            <div id="modal">
+                <h1>sigur doresti sa stergi<h1>
+                <button id="sterge">sterge</button>
+                <button id="cancel">cancel</button>
+            </div>
+            <div id="modalm">
+                <h1>sigur doresti sa modifici cheltuiala<h1>
+                <button id="modifica">Modifica</button>
+                <button id="cancelmod">cancel</button>
+            </div> 
+            <div id="input_modificare">
+                <h1>Fa schimbarile<h1>
+                <input type="text" id="cheltuialaNoua" placeholder="Introdu schimbarile">
+                <input type="number" id="sumaNoua" placeholder="Introdu schimbarile">
+                <button id="butschimbare">Schimba</button>
+            </div>
+        <div id="container">
+            <h1>Manager de cheltuiele</h1>
+            <div id="formular">
+                <form>
+                    <input type="text" id="nume_chelt" placeholder="Chelutiala">
+                    <input type="number" id="suma_chelt" placeholder="Suma">
+                    <button type="button" id="trimite">Trimite</button>
+                </form>
+            </div>
+            <p id="mesaj"></p>
+            <div id="total">
+                <h2>Total:<span id="suma">0</span> lei</h2>
+            </div>            
+            <ul id="lista">
+            </ul>
+
+        </div>
+
+
+    <script src="script.js"></script>
+    </body>
+</html>

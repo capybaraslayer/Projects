@@ -1,0 +1,10 @@
+-- Setări esențiale în LazyVim pentru codare curată
+vim.opt.relativenumber = true -- Te ajută să sari rapid peste linii în cod
+vim.opt.cursorline = true     -- Evidențiază linia curentă
+
+-- Setările perfecte de tab-uri pentru JS (2 sau 4 spații sunt standardul)
+vim.opt.expandtab = true      -- Transformă tab-ul în spații
+vim.opt.tabstop = 4           -- Un tab vizual să aibă 4 spații
+vim.opt.shiftwidth = 4        -- Indentarea automată să fie de 4 spații
+vim.opt.smartindent = true    -- Indentare inteligentă pentru blocuri de cod/parantez
+vim.opt.clipboard = "unnamedplus"
